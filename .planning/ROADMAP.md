@@ -1,15 +1,29 @@
 # Roadmap: Library Management System
 
 ## Phase 1: Core Inventory & Database (Foundation)
+
 **Goal:** Establish the database schema, backend API, and librarian management interface.
 **Plans:** 6 plans
+Plans:
+**Wave 1**
 
-Plans:
 - [ ] 01-01-PLAN.md — Monorepo & Scaffolding
 - [ ] 01-02-PLAN.md — Database Schema & Seed
+
+**Wave 2** *(blocked on Wave 1 completion)*
+
 - [ ] 01-03-PLAN.md — Auth & Security
+
+**Wave 3** *(blocked on Wave 2 completion)*
+
 - [ ] 01-04-PLAN.md — Inventory API
+
+**Wave 4** *(blocked on Wave 3 completion)*
+
 - [ ] 01-05-PLAN.md — Librarian Inventory UI
+
+**Wave 5** *(blocked on Wave 4 completion)*
+
 - [ ] 01-06-PLAN.md — Member Management
 
 - **Task 1.1:** Project setup (Express + Prisma + React + TypeScript).
@@ -19,6 +33,7 @@ Plans:
 - **Task 1.5:** Librarian UI: Member Registration.
 
 ## Phase 2: Search & Circulation (Core Workflows)
+
 **Goal:** Enable students to find books and librarians to manage borrowing.
 
 - **Task 2.1:** Student UI: Catalog Search (PostgreSQL Full-Text Search).
@@ -27,6 +42,7 @@ Plans:
 - **Task 2.4:** Librarian UI: Process Returns and view loan history.
 
 ## Phase 3: Automation & Notifications (Business Logic)
+
 **Goal:** Automate overdue tracking and fine management.
 
 - **Task 3.1:** Setup BullMQ for background job processing.
@@ -35,6 +51,7 @@ Plans:
 - **Task 3.4:** Basic notification system (UI-based alerts).
 
 ## Phase 4: Polish & Advanced Features (Refinement)
+
 **Goal:** Enhance usability and add professional touches.
 
 - **Task 4.1:** Mobile responsiveness audit and CSS polish.
