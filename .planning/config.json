@@ -1,0 +1,12 @@
+{
+  "project_name": "library-management",
+  "tech_stack": {
+    "frontend": "React",
+    "backend": "Node.js (Express)",
+    "styling": "Vanilla CSS"
+  },
+  "workflow": {
+    "research_enabled": true,
+    "auto_execute": false
+  }
+}
