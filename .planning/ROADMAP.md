@@ -2,6 +2,15 @@
 
 ## Phase 1: Core Inventory & Database (Foundation)
 **Goal:** Establish the database schema, backend API, and librarian management interface.
+**Plans:** 6 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Monorepo & Scaffolding
+- [ ] 01-02-PLAN.md — Database Schema & Seed
+- [ ] 01-03-PLAN.md — Auth & Security
+- [ ] 01-04-PLAN.md — Inventory API
+- [ ] 01-05-PLAN.md — Librarian Inventory UI
+- [ ] 01-06-PLAN.md — Member Management
 
 - **Task 1.1:** Project setup (Express + Prisma + React + TypeScript).
 - **Task 1.2:** Implement PostgreSQL schema (Books, Authors, Members, BookCopies).
