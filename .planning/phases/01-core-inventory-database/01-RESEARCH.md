@@ -211,12 +211,13 @@ export const BookSchema = z.object({
 | A1 | `csrf-csrf` is the optimal choice for stateless CSRF | Standard Stack | Lowered security if implementation is buggy. |
 | A2 | Vanilla CSS `table-layout: fixed` is sufficient for performance | Code Examples | Potential UI lag if dataset exceeds 5000+ rows without virtualization. |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Member ID format?**
    - What we know: UNIVERSITY environment suggests a specific Student ID format.
    - What's unclear: Should we enforce a regex on Student IDs in Phase 1?
    - Recommendation: Use a generic string for now, add validation in Phase 2.
+   - **(RESOLVED):** Use a generic string for Phase 1. Validation regex deferred to Phase 2.
 
 ## Environment Availability
 
