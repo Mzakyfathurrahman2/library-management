@@ -1,0 +1,34 @@
+{
+  "name": "@library/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./schemas/author": {
+      "import": "./dist/schemas/author.js",
+      "types": "./dist/schemas/author.d.ts"
+    },
+    "./schemas/book": {
+      "import": "./dist/schemas/book.js",
+      "types": "./dist/schemas/book.d.ts"
+    },
+    "./schemas/member": {
+      "import": "./dist/schemas/member.js",
+      "types": "./dist/schemas/member.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

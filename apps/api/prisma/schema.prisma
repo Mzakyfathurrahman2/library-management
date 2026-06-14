@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Author {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  books     Book[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Book {
+  id        String     @id @default(cuid())
+  title     String
+  isbn      String     @unique
+  author    Author     @relation(fields: [authorId], references: [id])
+  authorId  String
+  copies    BookCopy[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model BookCopy {
+  id        String     @id @default(cuid())
+  status    CopyStatus @default(AVAILABLE)
+  book      Book       @relation(fields: [bookId], references: [id])
+  bookId    String
+  loans     Loan[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+enum CopyStatus {
+  AVAILABLE
+  BORROWED
+  MAINTENANCE
+  LOST
+}
+
+model Member {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String   @default("$2b$10$EpjXWz.G5u5Y/x.6X.x.xe.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x") // Placeholder hashed password
+  role      Role     @default(STUDENT)
+  loans     Loan[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  STUDENT
+  LIBRARIAN
+}
+
+model Loan {
+  id         String    @id @default(cuid())
+  copy       BookCopy  @relation(fields: [copyId], references: [id])
+  copyId     String
+  member     Member    @relation(fields: [memberId], references: [id])
+  memberId   String
+  loanDate   DateTime  @default(now())
+  dueDate    DateTime
+  returnDate DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}

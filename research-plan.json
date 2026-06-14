@@ -1,0 +1,11 @@
+﻿{
+  "ecosystem": "npm",
+  "config": { "websearch": true },
+  "questions": [
+    { "text": "Prisma schema best practices for library management: Book, Author, BookCopy, Member relationships", "kind": "docs", "library": "prisma" },
+    { "text": "Express JWT HttpOnly cookie authentication pattern with CSRF protection best practices", "kind": "web" },
+    { "text": "React 19 high-density data table patterns using vanilla CSS for librarian dashboard", "kind": "web" },
+    { "text": "Validation architecture using Zod in a shared frontend/backend TypeScript project", "kind": "docs", "library": "zod" },
+    { "text": "Project structure for React 19 + Express + Prisma: Monorepo vs separate directories", "kind": "web" }
+  ]
+}
